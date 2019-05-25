@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess It!</title>
+</head>
+
+<body>
+    <h1>Guess What letter I'm Thinking of?</h1>
+    <h3>Please use lowercase letters. You have 5 tries.</h3>
+
+    <h1>Wins <span id='score'></span></h1>
+    <h1>Loses</h1>
+    <h1>Guess left</h1>
+    <h1>Guesses so far</h1>
+
+    <script>
+        // generate a random letter and store it in a variable for later use.
+        var UserLetter = 26
+        var wins = 0;
+        var maxTires = 5;   //the Max # of tries the user can guess
+
+        // Prompt user and ask them to guess a letter A-Z
+
+        // array score
+        // const $score = document.getElementById('score');
+        // variable for keeping score.
+        // let score = 0;
+
+        // var attempts moved into loop to keep prompting guesses from user. 
+        // while (attempts != randomLetter) {
+        //     var attempts = prompt("Please pick a letter between A-Z" + UserNumber);
+        //     counter += 1;
+
+        //     if (counter > maxTires) {
+        //         break
+        //         document.write("GAME OVER....You have no more tries left. Press F5 to play.");
+        //     }
+
+        //     if (attempts === randomLetter) {
+        //         document.write("Winner!");
+        //         document.write("The letter was" + randomLetter);
+        //         document.write("It took" + counter + "Attempts to get the correct letter");
+        //     }
+        // }
+
+
+        // Check to see if letter is correct
+
+        // If letter is wrong prompt the user again and ask them to guess again.  
+        // Repeat until user gets the number correct or they have used up their attempts
+
+        // If user guessed the correct number, tell them what it is, how many times it took them to guesss it, thank them for playing.
+
+        // my string
+        var randomLetter = "";
+        var alphabet = "abcdefghijklmnopqrstuvwxyz"
+         (randomLetter.length < 26) {
+            randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
+        }
+        console.log(randomLetter);
+    
+        document.onkeyup = function(event){
+            console.log(event)
+            console.log(event.key)
+
+// compare to t/f
+          console.log(event.key === randomLetter) 
+          if(event.key === randomLetter){
+            console.log("RIGHT!! 10 Points to Ravenclaw!")    
+          }
+          else{
+            console.log("Wrong!! No dessert for you!!!")
+          }
+        }
+
+
+        // Program complete
+        // $("#random-button").on('click', () => {
+        //     const randomNumber = Math.floor(Math.random() * 1000);
+        //     $('#random-number').text(randomNumber);
+        // })
+        // })
+
+    </script>
+
+</body>
+
+</html>
